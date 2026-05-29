@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "bulma": "^1.0.4",
-    "htmx": "^0.0.2"
+    "htmx.org": "^2.0.10"
   }
 }
