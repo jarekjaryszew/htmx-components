@@ -9,7 +9,8 @@ import (
 
 func main() {
 	mux := http.NewServeMux()
-	mux.Handle("/", http.FileServer(http.Dir("../frontend/dist")))
+
+	mux.Handle("/", http.FileServer(http.Dir("frontend/dist")))
 
 	server := &http.Server{
 		Addr:    ":3000",

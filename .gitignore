@@ -60,3 +60,5 @@ coverage/
 tmp/
 temp/
 .cache/
+
+.dirty

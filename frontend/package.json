@@ -21,5 +21,9 @@
     "style-loader": "^4.0.0",
     "webpack": "^5.107.2",
     "webpack-cli": "^7.0.3"
+  },
+  "dependencies": {
+    "bulma": "^1.0.4",
+    "htmx": "^0.0.2"
   }
 }
