@@ -1,0 +1,62 @@
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# --- Logs ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Environment files ---
+.env
+.env.*
+!.env.example
+
+# --- Go ---
+# Binaries and build outputs
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+bin/
+dist/
+coverage.out
+
+# Go workspace / tooling artifacts
+go.work.sum
+
+# --- Node / Webpack ---
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+.parcel-cache/
+
+# Frontend build outputs and caches
+frontend/dist/
+frontend/build/
+frontend/.cache/
+frontend/.webpack/
+frontend/coverage/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# --- Test / Coverage ---
+coverage/
+.nyc_output/
+
+# --- Misc temp ---
+tmp/
+temp/
+.cache/
