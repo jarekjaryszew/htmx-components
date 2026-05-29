@@ -1,5 +1,5 @@
 import "bulma/css/bulma.min.css";
-import 'htmx.org';
+import htmx from 'htmx.org';
 
 
 class GlobCSSTemplElement extends HTMLElement {
@@ -13,6 +13,13 @@ class GlobCSSTemplElement extends HTMLElement {
         globalStyles.forEach(style => {
             shadowRoot.appendChild(style.cloneNode(true));
         })
+    }
+
+        connectedCallback() {
+        // htmx does not auto-scan shadow roots; process this component root explicitly.
+        if (htmx && typeof htmx.process === 'function') {
+            htmx.process(this.shadowRoot);
+        }
     }
 }
 
