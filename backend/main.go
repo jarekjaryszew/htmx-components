@@ -12,8 +12,8 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.Handle("/", http.FileServer(http.Dir("frontend/dist")))
-	mux.Handle("/tasks", TaskList{})
-	mux.Handle("/calendar", Calendar{})
+	mux.Handle("/tasks", TaskListHandler{})
+	mux.Handle("/calendar", CalendarHandler{})
 
 	server := &http.Server{
 		Addr:    ":3000",
@@ -26,16 +26,23 @@ func main() {
 	}
 }
 
-type TaskList struct {
+type EmptyHandler struct {
 }
 
-func (tl TaskList) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	io.WriteString(w, "<h1>Tasks</h1>")
+func (e EmptyHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	io.WriteString(w, "")
 }
 
-type Calendar struct {
+type TaskListHandler struct {
 }
 
-func (c Calendar) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (tl TaskListHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	io.WriteString(w, "<my-tasks-view></my-tasks-view>")
+}
+
+type CalendarHandler struct {
+}
+
+func (c CalendarHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(w, "<h1>Calendar</h1>")
 }

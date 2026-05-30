@@ -1,0 +1,30 @@
+<div>
+    <nav class="level box">
+        <!-- Left side -->
+        <div class="level-left">
+            <div class="level-item">
+                <p class="subtitle is-5 mr-4"><strong>Tasks</strong></p>
+                <p class="level-item"><a class="button is-success">New</a></p>
+            </div>
+        </div>
+
+        <!-- Right side -->
+        <div class="level-right">
+            <div class="level-item">
+                <div class="field has-addons">
+                    <p class="control">
+                        <input class="input" type="text" placeholder="Find a post" />
+                    </p>
+                    <p class="control">
+                        <button class="button">Search</button>
+                    </p>
+                </div>
+            </div>
+            <p class="level-item"><strong>Sort</strong></p>
+            <p class="level-item "><a>Due</a></p>
+            <p class="level-item"><a>Created</a></p>
+            <p class="level-item"><a>Name</a></p>
+        </div>
+    </nav>
+    <slot id="my-tasks"></slot>
+</div>
